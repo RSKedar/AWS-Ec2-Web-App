@@ -1,0 +1,35 @@
+# 1. Connect to EC2 instance
+ssh -i web-key.pem ec2-user@<public-ip>
+
+# 2. Switch to root user (optional)
+sudo su -
+
+# 3. Update system packages
+yum update -y
+
+# 4. Install Apache web server
+yum install httpd -y
+
+# 5. Start Apache service
+systemctl start httpd
+
+# 6. Enable Apache at boot
+systemctl enable httpd
+
+# 7. Check Apache status
+systemctl status httpd
+
+# 8. Go to web root directory
+cd /var/www/html
+
+# 9. Create web page
+vi index.html
+
+# 10. Restart Apache
+systemctl restart httpd
+
+# 11. Check OS version (optional)
+cat /etc/os-release
+
+# 12. Check Apache version (optional)
+httpd -v
