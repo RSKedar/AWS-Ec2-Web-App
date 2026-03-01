@@ -51,7 +51,7 @@ Step 4: Install Web Server
 
 sudo yum install httpd -y
 sudo systemctl start httpd
-sudo systemctl enable httpd
+sudo systemctl enable httpd 
 
 Step 5: Deploy Application
 
